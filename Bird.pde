@@ -9,5 +9,10 @@ public class Bird {
     this.active = true;
   }
   
+  public void show() {
+    fill(255,0,0);
+    circle(pos.x, pos.y, SIZE);
+  }
+  
   
 }
