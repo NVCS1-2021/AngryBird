@@ -6,4 +6,8 @@ public class Pig {
   public Pig(PVector pos) {
     
   }
+  
+  public int getSIZE() {
+    return SIZE; 
+  }
 }
