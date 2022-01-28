@@ -10,4 +10,12 @@ public class Pig {
   public int getSIZE() {
     return SIZE; 
   }
+  
+  public void destroy() {
+   active = false; 
+  }
+  
+  public void setActive(boolean a) {
+    this.active = a;
+  }
 }

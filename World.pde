@@ -5,6 +5,7 @@ public class World {
   private Launcher launcher;
   private Structure str1;
   private Pig pig1;
+  private PVector startLaunchPos;
   
   public World() {
     this.w = width;
@@ -22,5 +23,15 @@ public class World {
   private void spawnWorld() {
     this.bird = new Bird(new PVector(50,h - 50), new PVector());
     this.pig1 = new Pig(new PVector(w - 100, h - 20));
+  }
+  
+  public void mousePressed() {
+     startLaunchPos = new PVector(mouseX, mouseY);
+  }
+  
+  public void mouseReleased() {
+    PVector endLaunchPos = new PVector(mouseX, mouseY);
+    PVector birdVel = PVector.sub(endLaunchPos, startLaunchPos);
+    launcher.launch(birdVel);
   }
 }

@@ -9,9 +9,10 @@ public class Launcher {
    /**
    * Launches a bird in a direction
    * based on the mouse dragging.
+   * @param birdVel the initial velocity based on the mouse drag
    * @return the launched bird
    */
-   public void launch() {
-     
+   public Bird launch(PVector birdVel) {
+     return new Bird(pos, birdVel);
    }
 }
