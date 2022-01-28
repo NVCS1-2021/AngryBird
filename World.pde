@@ -18,6 +18,14 @@ public class World {
     fill(135, 206, 235);
     rect(this.pos.x, this.pos.y, w, h);
     bird.show();
+    launcher.show();
+    if (pig1.getActive() > 2) {
+      pig1.show();
+    }
+    
+    str1.show();
+    bird.collide(pig1);
+    bird.collide(str1);
   }
   
   private void spawnWorld() {
