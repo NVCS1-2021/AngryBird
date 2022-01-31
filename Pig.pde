@@ -18,4 +18,8 @@ public class Pig {
   public void setActive(boolean a) {
     this.active = a;
   }
+  
+  public boolean isActive() {
+    return active;
+  }
 }

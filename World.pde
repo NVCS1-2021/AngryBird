@@ -19,7 +19,7 @@ public class World {
     rect(this.pos.x, this.pos.y, w, h);
     bird.show();
     launcher.show();
-    if (pig1.getActive() > 2) {
+    if (pig1.isActive()) {
       pig1.show();
     }
     
@@ -40,6 +40,6 @@ public class World {
   public void mouseReleased() {
     PVector endLaunchPos = new PVector(mouseX, mouseY);
     PVector birdVel = PVector.sub(endLaunchPos, startLaunchPos);
-    launcher.launch(birdVel);
+    bird = launcher.launch(birdVel);
   }
 }
